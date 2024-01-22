@@ -1,0 +1,28 @@
+{
+  "name": "repo",
+  "jsx": {
+    "version": 4
+  },
+  "sources": [
+    {
+      "dir": "src",
+      "subdirs": true
+    }
+  ],
+  "package-specs": [
+    {
+      "module": "es6-global",
+      "in-source": true
+    }
+  ],
+  "suffix": ".bs.js",
+  "namespace": false,
+  "uncurried": false,
+  "bs-dependencies": ["@greenlabs/ppx-spice"],
+  "ppx-flags": [["@greenlabs/ppx-spice/ppx"]],
+  "warnings": {
+    "number": "-44-30-32",
+    "error": "+5+4+6+8"
+  },
+  "bsc-flags": ["-bs-super-errors", "-bs-no-version-header", "-open Belt"]
+}

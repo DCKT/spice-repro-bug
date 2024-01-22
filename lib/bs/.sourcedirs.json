@@ -1,0 +1,1 @@
+{ "dirs" : [ "src" ] , "pkgs" : [ [ "@greenlabs/ppx-spice" , "/Users/thomasdeconinck/Projects/spice_repro/node_modules/@greenlabs/ppx-spice" ] ] , "generated" : [] }

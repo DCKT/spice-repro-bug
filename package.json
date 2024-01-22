@@ -1,0 +1,19 @@
+{
+  "name": "spice_repro",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "rescript build -w",
+    "test": "bun run src/Repro.bs.js"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@greenlabs/ppx-spice": "0.2.1-rc.2",
+    "rescript": "^11.0.1"
+  }
+}
