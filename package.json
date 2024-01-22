@@ -3,8 +3,8 @@
   "module": "index.ts",
   "type": "module",
   "scripts": {
-    "dev": "rescript build -w",
-    "test": "bun run src/Repro.bs.js"
+    "dev": "rescript build",
+    "test": "rescript build && bun run src/Repro.bs.js"
   },
   "devDependencies": {
     "@types/bun": "latest"
