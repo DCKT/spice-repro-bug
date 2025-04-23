@@ -1,0 +1,10 @@
+#Start(1745397161606)
+
+  We've found a bug for you!
+  /Users/thomasdeconinck/Projects/perso/spice_repro/src/Test.res
+
+  This function has type [< #tata | #toto] => Js.Json.t
+  It only accepts 1 argument; here, it's called with more.
+
+FAILED: cannot make progress due to previous errors.
+#Done(1745397161682)

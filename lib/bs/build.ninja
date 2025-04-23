@@ -1,0 +1,14 @@
+rescript = 1
+g_finger := /Users/thomasdeconinck/Projects/perso/spice_repro/node_modules/@greenlabs/ppx-spice/lib/ocaml/install.stamp
+rule astj
+  command = /Users/thomasdeconinck/Projects/perso/spice_repro/node_modules/rescript/darwinarm64/bsc.exe -w -44-30-32 -warn-error +5+4+6+8 -bs-v 12.0.0-alpha.12,1745397017.65 -ppx '/Users/thomasdeconinck/Projects/perso/spice_repro/node_modules/@greenlabs/ppx-spice/ppx -uncurried' -bs-jsx 4  -absname -bs-ast -o $out $i
+o src/Test.ast : astj ../../src/Test.res
+rule deps
+  command = /Users/thomasdeconinck/Projects/perso/spice_repro/node_modules/rescript/darwinarm64/bsb_helper.exe -hash 7b18d7bf88188ea959648ad886c6913a $in
+  restat = 1
+o src/Test.d : deps src/Test.ast
+rule mij
+  command = /Users/thomasdeconinck/Projects/perso/spice_repro/node_modules/rescript/darwinarm64/bsc.exe -I src -I /Users/thomasdeconinck/Projects/perso/spice_repro/node_modules/@greenlabs/ppx-spice/lib/ocaml  -w -44-30-32 -warn-error +5+4+6+8 -bs-package-name spice-repro -bs-package-output esmodule:lib/es6/$in_d:.bs.js -bs-v $g_finger $i
+  dyndep = 1
+  restat = 1
+o src/Test.cmj src/Test.cmi ../es6/src/Test.bs.js : mij src/Test.ast

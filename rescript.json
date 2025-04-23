@@ -1,0 +1,27 @@
+{
+  "name": "spice-repro",
+  "jsx": {
+    "version": 4
+  },
+  "sources": [
+    {
+      "dir": "src",
+      "subdirs": true
+    }
+  ],
+  "package-specs": [
+    {
+      "module": "esmodule",
+      "in-source": false
+    }
+  ],
+  "suffix": ".bs.js",
+  "namespace": false,
+  "uncurried": true,
+  "bs-dependencies": ["@greenlabs/ppx-spice"],
+  "ppx-flags": [["@greenlabs/ppx-spice/ppx", "-uncurried"]],
+  "warnings": {
+    "number": "-44-30-32",
+    "error": "+5+4+6+8"
+  }
+}

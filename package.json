@@ -1,0 +1,17 @@
+{
+  "name": "spice_repro",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "dependencies": {
+    "@greenlabs/ppx-spice": "0.2.7",
+    "rescript": "12.0.0-alpha.12"
+  },
+  "trustedDependencies": [
+    "@greenlabs/ppx-spice"
+  ],
+  "scripts": {
+    "test": "rescript build"
+  }
+}
+
